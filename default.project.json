@@ -1,0 +1,7 @@
+{
+	"name": "ScriptService",
+
+	"tree": {
+		"$path": "src/MainModule"
+	}
+}
