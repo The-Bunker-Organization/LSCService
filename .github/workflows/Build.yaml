@@ -1,4 +1,4 @@
-name: WavService RBXM Generator
+name: LSCService RBXM Generator
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
           rokit install
 
       - name: Build RBXMX
-        run: rojo build default.project.json -o ../WavService.rbxmx
+        run: rojo build default.project.json -o ../LSCService.rbxmx
 
       - name: Format commit message
         id: commit
@@ -54,6 +54,6 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: build-${{ github.run_number }}
-          name: WavService Build Release
-          files: WavService.rbxmx
+          name: LSCService Build Release
+          files: LSCService.rbxmx
           body: ${{ steps.commit.outputs.body }}
